@@ -1,0 +1,120 @@
+
+/* ---- Learn from here ------------------------------------------------------------ */
+Net Ninja:-
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
+
+New Boston:- 
+https://www.youtube.com/watch?v=cEGIFZDyszA&list=PL6gx4Cwl9DGAKWClAD_iKpNC0bGHxGhcx
+
+Simplilearn:- 
+https://www.youtube.com/watch?v=hDxIdPxKt5w
+
+/* --- ----- --- ---------------------------------------------------------------------*/
+
+/*-------------- Post installation Test ------------------ */
+1) Open gitbash 
+2) create a directory :- mkdir <dir name>
+3) go to directory :- cd <dir name>
+4) initialize git for the directory:- git init
+5) create a file in the directory.
+6) check git status :- git status
+** You will see the file in red as its not being tracked.
+7) add file to current directory :- git add <file_name>
+8) check git status :- git status 
+** You will see the file now green as its being tracked.
+9) Now commit the file :- git commit -m "<some message>"
+** This applies to all the parent directories too.
+10)check git status :- git status
+** It will show nothing left to commit.Working tree is clean. 
+
+/*-------------- Link git to global account ------------------ */
+
+11) Link local directory to web git directory :- git config --global user.username <github_account>
+** github_account we can see in github website in top right corner after "signed in as"
+12) Link repository to local :- git remote add origin https://github.com/<github_account>/<repository_name>.git
+13) Push the file from local to remote :- git push origin master / (or git push -f origin master)
+
+/*-------------- If any changes made to file locally then we need to send to remote ------------------ */
+git add <file_name>
+git commit -m "<some message>"
+git push origin master
+
+/* -- add files in a repo---- */
+Stage all Files :- git add -A / git add .
+Stage all New and Modified Files :- git add --ignore-removal .
+Adding Files by Wildcard :- git add *.py / git add **/*.js
+
+Changing a remote url :- 
+git remote set-url origin  https://github.com/deboprio/MyCodeRepo.git
+
+/* -- Open Repo in VSCode editor ---- */
+code.
+
+git remote add origin https://github.com/hootums/hootums-misc.git
+
+
+/* -------------- Creating the setup from existing repo -------------- */
+
+1) Fork the main repo.
+2) Create a new Folder where we are suppose to keep the projects.
+3) Open git bash here and then get the setup
+git clone <The Repo Path of the copy of main repo in my git due to forking>
+Example : git clone https://github.com/my_user_name/main_repo_name.git
+ 
+This will bring the code to my local server from the repo which was created due to forking.
+4) Enter the directory which got created due to cloning.
+5) Execute :- 
+git remote add upstream <The Main Repo Path which was forked>
+Example : https://github.com/main user name/main_repo_name.git
+
+Upstream = main repo common for all of us
+6)  Check setup with :- 
+git remote -v
+
+7) Check the latest commit by 
+git log
+
+8) git pull --rebase upstream develop
+This will pull latest changes from main branch to my current forked repo's branch
+
+9) Execute 
+git log
+It should show the changes on top of cloned repo (In step 3 if any)
+
+10) We are now ready to open the code in IDE
+
+/* -------------- Pushing change and creating pull request -------------- */
+
+1) Open Android Studio 
+
+2) Import a project
+
+3) Change any file
+
+4) Open git bash in the project path. 
+Like if Application is in E:Projects/MyApp, we need to ensure that we are in E:Projects/MyApp in git bash shell.
+
+5) Create a branch first : git checkout -b <NEW_BRANCH_NAME> ( This is to ensure our code change is not disturbing master / default branch in remote)
+
+6) git status 
+
+7) git add .
+
+8) git commit -m "Add your Comment"
+
+9) git log
+
+10) git push origin <NEW_BRANCH_NAME> (This will push the changes from my local computer to the newly created branch in my remote repository)
+
+11) Open gituhub in browser and create a pull request with reviewer.
+
+12) If reviwer feels the changes are ok. They will merge or squash or merge or send back.
+
+
+
+
+
+
+
+
+
