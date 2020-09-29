@@ -110,6 +110,10 @@ Like if Application is in E:Projects/MyApp, we need to ensure that we are in E:P
 
 12) If reviwer feels the changes are ok. They will merge or squash or merge or send back.
 
+/* --- Key Concept -----*/
+1) Upstream = main repo common for all of us
+2) Origin = my repo (changes only for me) [always create a new branch]
+
 
 
 
